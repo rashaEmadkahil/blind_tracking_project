@@ -41,7 +41,10 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
               padding: EdgeInsetsDirectional.only(
                   bottom: 13, top: 13, start: 21, ),
               child: ListTile(
-                leading: CircleAvatar(),
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('images/signup_login.png'),
+
+                ),
                 title: Text('حسابي',style: TextStyle(
                   fontSize: 18
                 ),),
