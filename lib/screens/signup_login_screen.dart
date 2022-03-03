@@ -15,9 +15,9 @@ class SignUpLoginScreen extends StatelessWidget {
                 height: 146,
               ),
               Container(
-                color: Colors.grey,
-                width: 243,
-                height: 257,
+
+                child: Image.asset('images/signup_login.png'),
+
               ),
               SizedBox(
                 height: 77.4,

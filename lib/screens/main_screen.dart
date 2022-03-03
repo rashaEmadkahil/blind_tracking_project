@@ -32,7 +32,10 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: (){
+            Navigator.pushReplacementNamed(context, '/login_screen');
+
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Color(0XFF989595),

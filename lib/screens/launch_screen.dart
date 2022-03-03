@@ -20,7 +20,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
       //the pushnamed put the launch screen in the stack then put azcar screen in stack when azcar finish run it call
       //back the launch screen from stack
       //رح تلاحظ بعد تنفيذ هادي العملية رجع رجعني عال lunch screen بسبب انه بشكل مبدئي بيحط زر الرجوع بالappbar
-      Navigator.pushReplacementNamed(context, '/main_screen');
+      Navigator.pushReplacementNamed(context, '/signup_login_screen');
     });
   }
   @override

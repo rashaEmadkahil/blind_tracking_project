@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Color(0XFFB6E13D)
           ),),
         ),
-        SizedBox(height: 46,),
+        SizedBox(height: 30,),
         Row(
           children: [
             Text('المكفولين', style: TextStyle(
@@ -71,23 +71,27 @@ class _HomeScreenState extends State<HomeScreen> {
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
-          return Card(
+          return InkWell(
+            onTap: (){
+              Navigator.pushReplacementNamed(context, '/trips_screen');
 
-            margin: EdgeInsetsDirectional.only(bottom: 25),
-            elevation: 5,
-            child: Padding(
-              padding: EdgeInsetsDirectional.only(start: 19,end:21 ,bottom: 11,top: 12),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: CircleAvatar(
+            },
+            child: Card(
+
+              margin: EdgeInsetsDirectional.only(bottom: 25),
+              elevation: 5,
+              child: Padding(
+                padding: EdgeInsetsDirectional.only(start: 19,end:21 ,bottom: 11,top: 12),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('images/soha.png'),
+
                       radius: 30.5,
                       backgroundColor: Colors.grey,
                     ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Column(children: [
+                    SizedBox(width:  23,),
+                    Column(children: [
                       Text('الاء عمر', style: TextStyle(
                           fontSize: 16,
                           color: Color(0XFF050505),
@@ -99,16 +103,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.bold
                       ),),
                     ],),
-                  ),
-                  Text('نشط الان', style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0XFF134878),
-                      fontWeight: FontWeight.bold
-                  )),
-                ],
-              ),
-            ),
+                    SizedBox(width: 100,),
 
+                    Text('نشط الان', style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0XFF134878),
+                        fontWeight: FontWeight.bold
+                    )),
+                  ],
+                ),
+              ),
+
+            ),
           );
         },
           itemCount: 5,)

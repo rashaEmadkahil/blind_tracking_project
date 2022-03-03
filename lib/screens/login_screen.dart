@@ -11,6 +11,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
 
   late TapGestureRecognizer _tapGestureRecognizer;
+  late TapGestureRecognizer _tapGestureRecognizer2;
   late TextEditingController _textEditingController;
   late TextEditingController _passwordEditingController;
 
@@ -23,19 +24,23 @@ class _LoginScreenState extends State<LoginScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tapGestureRecognizer = TapGestureRecognizer()..onTap = navToReg;
+    _tapGestureRecognizer = TapGestureRecognizer()..onTap = navToSignUp;
+    _tapGestureRecognizer2 = TapGestureRecognizer()..onTap = navToForgetPass;
     _textEditingController = TextEditingController();
     _passwordEditingController = TextEditingController();
   }
 
-  void navToReg() =>
-      Navigator.pushReplacementNamed(context, '/register_screen');
+  void navToSignUp() =>
+      Navigator.pushReplacementNamed(context, '/sign_up_screen');
+void navToForgetPass() =>
+      Navigator.pushReplacementNamed(context, '/forget_password_screen');
 
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
     _tapGestureRecognizer.dispose();
+    _tapGestureRecognizer2.dispose();
     _textEditingController.dispose();
     _passwordEditingController.dispose();
   }
@@ -63,9 +68,9 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: EdgeInsetsDirectional.only(start: 39, end: 39),
           child: Column(children: [
             Container(
-              color: Colors.grey,
-              width: 268.53,
-              height: 276.94,
+              // color: Colors.grey,
+              child: Image.asset('images/login.png'),
+
             ),
             SizedBox(
               height: 36.1,
@@ -123,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       TextSpan(
 
-                        recognizer: _tapGestureRecognizer,
+                        recognizer: _tapGestureRecognizer2,
                     text: 'هل نسيت كلمة السر؟',                        style: TextStyle(
                             color: Colors.blue.shade700,
                             fontWeight: FontWeight.bold,
@@ -136,7 +141,10 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 56,
             ),
             ElevatedButton(
-              onPressed: _performLogin,
+              onPressed:() {
+                Navigator.pushReplacementNamed(context, '/main_screen');
+              },
+              // _performLogin,
               child: Text(
                 'تسجيل الدخول',
                 style: TextStyle(fontFamily: 'cairo', fontSize: 20),
@@ -222,6 +230,6 @@ class _LoginScreenState extends State<LoginScreen> {
         ))
         .closed
         .then((value) =>
-            Navigator.pushReplacementNamed(context, '/home_screen'));
+            Navigator.pushReplacementNamed(context, '/main_screen'));
   }
 }

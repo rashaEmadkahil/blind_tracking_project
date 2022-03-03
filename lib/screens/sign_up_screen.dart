@@ -30,7 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void navToReg() =>
-      Navigator.pushReplacementNamed(context, '/register_screen');
+      Navigator.pushReplacementNamed(context, '/login_screen');
 
   @override
   void dispose() {
@@ -50,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           backgroundColor: Colors.white,
           leading: IconButton(
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/blind_home_screen');
+              Navigator.pushReplacementNamed(context, '/signup_login_screen');
             },
             icon: Icon(
               Icons.arrow_back_ios_rounded,
@@ -64,9 +64,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
           padding: EdgeInsetsDirectional.only(start: 39, end: 39),
           child: Column(children: [
             Container(
-              color: Colors.grey,
-              width: 256.38,
-              height: 251.65,
+              child:Image.asset('images/sign_up.png'),
+              color: Colors.transparent,
+              // width: 256.38,
+              // height: 251.65,
             ),
             SizedBox(
               height: 45,
@@ -137,7 +138,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 41,
             ),
             ElevatedButton(
-              onPressed:_performLogin,
+              onPressed:(){
+                Navigator.pushReplacementNamed(context, '/login_screen');
+
+              },
+              // _performLogin,
               child: Text(
                 'انشاء حساب',
                 style: TextStyle(fontFamily: 'cairo', fontSize: 20),

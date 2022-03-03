@@ -24,8 +24,8 @@ class _ResetPasswordScreen extends State<ResetPasswordScreen> {
     _password2EditingController = TextEditingController();
   }
 
-  void navToReg() =>
-      Navigator.pushReplacementNamed(context, '/register_screen');
+  // void navToReg() =>
+  //     Navigator.pushReplacementNamed(context, '/register_screen');
 
   @override
   void dispose() {
@@ -51,7 +51,7 @@ class _ResetPasswordScreen extends State<ResetPasswordScreen> {
           ),
           leading: IconButton(
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/blind_home_screen');
+              Navigator.pushReplacementNamed(context, '/login_screen');
             },
             icon: Icon(
               Icons.arrow_back_ios_rounded,
@@ -68,9 +68,8 @@ class _ResetPasswordScreen extends State<ResetPasswordScreen> {
               height: 50.3,
             ),
             Container(
-              color: Colors.grey,
-              width: 317.23,
-              height: 206.48,
+              child: Image.asset('images/reset_password.png'),
+
             ),
             SizedBox(
               height: 51.6,
@@ -120,7 +119,10 @@ class _ResetPasswordScreen extends State<ResetPasswordScreen> {
                 )),
             SizedBox(height: 40),
             ElevatedButton(
-              onPressed: _performLogin,
+              onPressed: (){
+                Navigator.pushReplacementNamed(context, '/login_screen');
+
+              },
               child: Text(
                 'اعادة تعيين',
                 style: TextStyle(fontFamily: 'cairo', fontSize: 20),

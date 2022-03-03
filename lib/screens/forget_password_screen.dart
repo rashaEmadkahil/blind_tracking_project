@@ -31,9 +31,8 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
           children: [
           SizedBox(height: 21.6,),
           Container(
-            color: Colors.grey,
-            width: 235.27,
-            height: 229.05,
+            child: Image.asset('images/forget_password.png'),
+
           ),
             SizedBox(height: 36.7,),
             Text('تم ارسال الرمز الخاص بك على الرقم 059*****06'
@@ -47,24 +46,109 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
               color: Color(0XFF134878)
             ),),
             Row(children: [
-              TextField(
-                keyboardType: TextInputType.numberWithOptions(
-                    decimal: false, signed: false),
-                decoration: InputDecoration(
-                  // errorText:_emailErrorText ,
+              SizedBox(
+                width: 62,
+                height: 92,
+                child: TextField(
+                  keyboardType: TextInputType.numberWithOptions(
+                      decimal: false, signed: false),
+                  decoration: InputDecoration(
+                    
+                   fillColor: Colors.white,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        //عشان تخفي العرض لازم تعمل اللون TRANSPARENT
+                        width: 1,
+                      ),
+                    ),
+                  ),
                 ),
-              )
+              ),
+              SizedBox(width: 20,),
+              SizedBox(
+                width: 62,
+                height: 92,
+                child: TextField(
+                  keyboardType: TextInputType.numberWithOptions(
+                      decimal: false, signed: false),
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        //عشان تخفي العرض لازم تعمل اللون TRANSPARENT
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20,),
+              SizedBox(
+                width: 62,
+                height: 92,
+                child: TextField(
+                  keyboardType: TextInputType.numberWithOptions(
+                      decimal: false, signed: false),
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        //عشان تخفي العرض لازم تعمل اللون TRANSPARENT
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20,),
+              SizedBox(
+                width: 62,
+                height: 92,
+                child: TextField(
+                  keyboardType: TextInputType.numberWithOptions(
+                      decimal: false, signed: false),
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        //عشان تخفي العرض لازم تعمل اللون TRANSPARENT
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              
+
             ],),
             SizedBox(height: 9,),
-            Text('تم ارسال الرمز الخاص بك على الرقم 059*****06'
+            Text('اعادة الارسال'
               ,style: TextStyle(
                   fontSize: 15,
                   color: Color(0XFF134878),
                 fontWeight: FontWeight.bold
               ),),
-            SizedBox(height: 68,),
+            SizedBox(height: 40,),
             ElevatedButton(
-              onPressed: _performLogin,
+              onPressed: (){
+                Navigator.pushReplacementNamed(context, '/reset_password_screen');
+
+              },
               child: Text(
                 ' تاكيد',
                 style: TextStyle(fontFamily: 'cairo', fontSize: 20),

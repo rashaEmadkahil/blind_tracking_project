@@ -17,7 +17,10 @@ class _TripsScreenState extends State<TripsScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home_screen');
+
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Color(0XFF989595),
@@ -34,18 +37,20 @@ class _TripsScreenState extends State<TripsScreen> {
         ],
       ),
       body: ListView(
-        padding: EdgeInsetsDirectional.only(start: 23, end: 24),
+        padding: EdgeInsetsDirectional.only(
+            start: 23, end: 24),
         children: [
-          SizedBox(
-            height: 9.4,
-          ),
+          // SizedBox(
+          //   height: 9.4,
+          // ),
           Container(
-            height: 162,
-            width: 50,
-            color: Colors.grey,
+            // height: 162,
+            // width: 50,
+            child: Image.asset('images/1_view.png'),
+            // color: Colors.grey,
           ),
           SizedBox(
-            height: 19,
+            height: 0,
           ),
           Padding(
             padding: EdgeInsetsDirectional.only(start: 165),

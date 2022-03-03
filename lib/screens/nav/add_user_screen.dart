@@ -22,8 +22,31 @@ class _AddUserScreenState extends State<AddUserScreen> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsetsDirectional.only(start: 37, end: 38),
+      padding: EdgeInsetsDirectional.only(
+          start: 37, end: 38,top: 44),
       children: [
+        Center(
+          child: Stack(
+            // alignment: Alignment.center,
+            children: [
+              Center(child: Image.asset('images/profile.png')),
+              IconButton(
+                onPressed: () {
+
+                },
+                icon: Positioned(
+                  top: 173.9,
+                  right: 142,
+                  left: 250,
+                  bottom: 0,
+                  child: Icon(Icons.camera_alt_rounded,
+                  color: Color(0xff134878),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
         SizedBox(
           height: 42,
         ),

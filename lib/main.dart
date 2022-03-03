@@ -39,11 +39,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/launch_screen': (context) => const LaunchScreen(),
         '/signup_login_screen': (context) => const SignUpLoginScreen(),
-        '/signup_screen': (context) => const SignUpScreen(),
+        '/sign_up_screen': (context) => const SignUpScreen(),
         '/login_screen': (context) => const LoginScreen(),
         '/forget_password_screen': (context) => const ForgetPasswordScreen(),
         '/main_screen': (context) => const MainScreen(),
-        '/reset_password_screen.dart': (context) => const ResetPasswordScreen(),
+        '/reset_password_screen': (context) => const ResetPasswordScreen(),
         '/add_user_screen': (context) => const AddUserScreen(),
         '/contact_screen': (context) => const ContactScreen(),
         '/home_screen': (context) => const HomeScreen(),
