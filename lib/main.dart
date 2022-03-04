@@ -1,3 +1,5 @@
+import 'package:blind_tracking_project/notification_screen.dart';
+import 'package:blind_tracking_project/screens/editprofile_screen.dart';
 import 'package:blind_tracking_project/screens/forget_password_screen.dart';
 import 'package:blind_tracking_project/screens/launch_screen.dart';
 import 'package:blind_tracking_project/screens/login_screen.dart';
@@ -7,6 +9,7 @@ import 'package:blind_tracking_project/screens/nav/contact_screen.dart';
 import 'package:blind_tracking_project/screens/nav/home_screen.dart';
 import 'package:blind_tracking_project/screens/nav/profile_manage_screen.dart';
 import 'package:blind_tracking_project/screens/nav/settings_screen.dart';
+import 'package:blind_tracking_project/screens/profile_screen.dart';
 import 'package:blind_tracking_project/screens/reset_password_screen.dart';
 import 'package:blind_tracking_project/screens/sign_up_screen.dart';
 import 'package:blind_tracking_project/screens/signup_login_screen.dart';
@@ -50,6 +53,9 @@ class MyApp extends StatelessWidget {
         '/profile_manage_screen': (context) => const ProfileManageScreen(),
         '/trips_screen': (context) => const TripsScreen(),
         '/settings_screen': (context) => const SettingsScreen(),
+        '/notification': (context) =>  NotificationScreen(),
+        '/editprofile': (context) =>  EditProfile(),
+        '/profile_screen': (context) =>  ProfileScreen(),
         // '/settings_screen': (context) => const SettingsScreen(),
       });
   }

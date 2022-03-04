@@ -99,34 +99,39 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
               ),
             ),
           ),
-          Card(
-            margin: EdgeInsetsDirectional.only(bottom: 20),
-            elevation: 5,
-            child: Padding(
-              padding: EdgeInsetsDirectional.only(
-                bottom: 13, top: 13, start: 21, ),
-              child: ListTile(
-                leading: CircleAvatar(),
-                title: Text('حسابي',style: TextStyle(
-                    fontSize: 18
-                ),),
-                trailing: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 14,
-                  color: Color(0XFF8D8A8A),
+          InkWell(
+            onTap: () =>
+                Navigator.pushNamed(context, '/profile_screen')
+            ,
+            child: Card(
+              margin: EdgeInsetsDirectional.only(bottom: 20),
+              elevation: 5,
+              child: Padding(
+                padding: EdgeInsetsDirectional.only(
+                  bottom: 13, top: 13, start: 21, ),
+                child: ListTile(
+                  leading: CircleAvatar(),
+                  title: Text('حسابي',style: TextStyle(
+                      fontSize: 18
+                  ),),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    size: 14,
+                    color: Color(0XFF8D8A8A),
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Future.delayed(
+                        Duration(
+                          milliseconds: 700,
+                        ), () {
+                      //the pushnamed put the launch screen in the stack then put azcar screen in stack when azcar finish run it call
+                      //back the launch screen from stack
+                      //رح تلاحظ بعد تنفيذ هادي العملية رجع رجعني عال lunch screen بسبب انه بشكل مبدئي بيحط زر الرجوع بالappbar
+                      Navigator.pushNamed(context, '/profile_manage_screen');
+                    });
+                  },
                 ),
-                onTap: () {
-                  Navigator.pop(context);
-                  Future.delayed(
-                      Duration(
-                        milliseconds: 700,
-                      ), () {
-                    //the pushnamed put the launch screen in the stack then put azcar screen in stack when azcar finish run it call
-                    //back the launch screen from stack
-                    //رح تلاحظ بعد تنفيذ هادي العملية رجع رجعني عال lunch screen بسبب انه بشكل مبدئي بيحط زر الرجوع بالappbar
-                    Navigator.pushNamed(context, '/profile_manage_screen');
-                  });
-                },
               ),
             ),
           ),

@@ -3,6 +3,7 @@ import 'package:blind_tracking_project/screens/nav/add_user_screen.dart';
 import 'package:blind_tracking_project/screens/nav/contact_screen.dart';
 import 'package:blind_tracking_project/screens/nav/profile_manage_screen.dart';
 import 'package:blind_tracking_project/screens/nav/settings_screen.dart';
+import 'package:blind_tracking_project/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     const BnItem(title: 'الرئيسية', widget: HomeScreen()),
     const BnItem(title: 'اضافة مكفول', widget: AddUserScreen()),
     const BnItem(title: 'جهات الاتصال', widget: ContactScreen()),
-    const BnItem(title: 'الاعدادات', widget: SettingsScreen()),
+    const BnItem(title: 'الاعدادات', widget: ProfileScreen()),
   ];
 
   @override
