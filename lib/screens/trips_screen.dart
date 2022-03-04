@@ -28,7 +28,10 @@ class _TripsScreenState extends State<TripsScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/notification');
+
+            },
             icon: Icon(
               Icons.notifications_none_outlined,
               color: Color(0XFF6C6B6B),

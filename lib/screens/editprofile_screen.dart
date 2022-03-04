@@ -61,7 +61,7 @@ class EditProfile extends StatelessWidget {
         ],
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/editprofile');
+            Navigator.pushReplacementNamed(context, '/profile_screen');
           },
           icon: Icon(
             Icons.arrow_back_ios_rounded,

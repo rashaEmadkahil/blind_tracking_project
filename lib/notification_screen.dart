@@ -6,14 +6,14 @@ class NotificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title: Text("الاشعارات",style: TextStyle( color: Color(0xff134878),),),
-        backgroundColor: Colors.grey[100],
+        backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/signup_login_screen');
+            Navigator.pushReplacementNamed(context, '/main_screen');
           },
           icon: Icon(
             Icons.arrow_back_ios_rounded,
@@ -23,13 +23,18 @@ class NotificationScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: SafeArea(child:
-      Container(
-        margin: EdgeInsets.symmetric(vertical: 30 ,),
-        child: ListView.builder(
-            itemCount:  5,
-            itemBuilder: (context , x) {
-              return  NotificationWidget();
-            }),
+      InkWell(
+        onTap: () =>
+            Navigator.pushReplacementNamed(context, '/notification_detail_screen')
+        ,
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 30 ,),
+          child: ListView.builder(
+              itemCount:  5,
+              itemBuilder: (context , x) {
+                return  NotificationWidget();
+              }),
+        ),
       )
       ),
     );

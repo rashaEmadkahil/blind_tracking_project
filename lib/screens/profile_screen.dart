@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Colors.grey[100],
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/signup_login_screen');
+            Navigator.pushReplacementNamed(context, '/main_screen');
           },
           icon: Icon(
             Icons.arrow_back_ios_rounded,

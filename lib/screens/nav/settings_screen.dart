@@ -157,19 +157,34 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             onTap: () {
               Navigator.pop(context);
-              // Future.delayed(
-              //     Duration(
-              //       milliseconds: 700,
-              //     ), () {
-              //   //the pushnamed put the launch screen in the stack then put azcar screen in stack when azcar finish run it call
-              //   //back the launch screen from stack
-              //   //رح تلاحظ بعد تنفيذ هادي العملية رجع رجعني عال lunch screen بسبب انه بشكل مبدئي بيحط زر الرجوع بالappbar
-              //   Navigator.pushNamed(context, '/fags_screen');
-              // });
+              _showLogOutConfirmDialog();
             },
           ),
         )
       ],
+    );
+  }
+  void _showLogOutConfirmDialog() {
+    showDialog(
+      context: context,
+      // barrierDismissible: false,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(
+            'هل انت متأكد بانك ترغب في تسجيل الخروج من التطبيق  ',
+            style: TextStyle(fontSize: 20),
+          ),
+          actions: [
+            TextButton(onPressed: () {
+            }
+        , child: Text('تاكيد'),),
+            TextButton(onPressed: (){}
+              , child: Text('الغاء'),),
+
+
+          ],
+        );
+      },
     );
   }
 }

@@ -22,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     const BnItem(title: 'الرئيسية', widget: HomeScreen()),
     const BnItem(title: 'اضافة مكفول', widget: AddUserScreen()),
     const BnItem(title: 'جهات الاتصال', widget: ContactScreen()),
-    const BnItem(title: 'الاعدادات', widget: ProfileScreen()),
+    const BnItem(title: 'الاعدادات', widget: SettingsScreen()),
   ];
 
   @override
@@ -32,14 +32,17 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          onPressed: (){
-            Navigator.pushReplacementNamed(context, '/login_screen');
+        leading: Visibility(
+          visible: _currentIndex!=0,
+          child: IconButton(
+            onPressed: (){
+              Navigator.pushReplacementNamed(context, '/main_screen');
 
-          },
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Color(0XFF989595),
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Color(0XFF989595),
+            ),
           ),
         ),
         title:

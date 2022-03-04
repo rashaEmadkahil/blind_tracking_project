@@ -1,3 +1,4 @@
+import 'package:blind_tracking_project/notification_detail_screen.dart';
 import 'package:blind_tracking_project/notification_screen.dart';
 import 'package:blind_tracking_project/screens/editprofile_screen.dart';
 import 'package:blind_tracking_project/screens/forget_password_screen.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         '/notification': (context) =>  NotificationScreen(),
         '/editprofile': (context) =>  EditProfile(),
         '/profile_screen': (context) =>  ProfileScreen(),
+        '/notification_detail_screen': (context) =>  NotificationDetailScreen(),
         // '/settings_screen': (context) => const SettingsScreen(),
       });
   }
