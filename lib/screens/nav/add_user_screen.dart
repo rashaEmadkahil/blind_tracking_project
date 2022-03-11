@@ -25,7 +25,9 @@ class _AddUserScreenState extends State<AddUserScreen> {
       margin: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Stack(
             children: [
               CircleAvatar(
@@ -42,7 +44,6 @@ class _AddUserScreenState extends State<AddUserScreen> {
               )
             ],
           ),
-
           Expanded(
             child: ListView(
               children: [
@@ -267,17 +268,15 @@ class _AddUserScreenState extends State<AddUserScreen> {
       // barrierDismissible: false,
       builder: (context) {
         return AlertDialog(
-           title: Icon(
+          title: Icon(
             Icons.check_circle,
             color: Color(0XFFA2C900),
             size: 67,
           ),
-          
-          content: Center(
-            child: Text(
-              'تمت العملية بنجاح ',
-              style: TextStyle(fontSize: 20),
-            ),
+          content: Text(
+            'تمت العملية بنجاح ',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 20),
           ),
         );
       },

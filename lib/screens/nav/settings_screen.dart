@@ -39,16 +39,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               color: Color(0XFFB2B2B2),
             ),
             onTap: () {
-              Navigator.pop(context);
-              Future.delayed(
-                  Duration(
-                    milliseconds: 700,
-                  ), () {
-                //the pushnamed put the launch screen in the stack then put azcar screen in stack when azcar finish run it call
-                //back the launch screen from stack
-                //رح تلاحظ بعد تنفيذ هادي العملية رجع رجعني عال lunch screen بسبب انه بشكل مبدئي بيحط زر الرجوع بالappbar
-                Navigator.pushNamed(context, '/profile_manage_screen');
-              });
+              Navigator.pushNamed(context, '/profile_manage_screen');
             },
           ),
         ),
@@ -156,7 +147,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               color: Color(0XFFB2B2B2),
             ),
             onTap: () {
-              Navigator.pop(context);
               _showLogOutConfirmDialog();
             },
           ),
@@ -164,8 +154,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ],
     );
   }
-  void _showLogOutConfirmDialog() {
-    showDialog(
+
+  void _showLogOutConfirmDialog() async {
+  bool? logout = await  showDialog<bool>(
       context: context,
       // barrierDismissible: false,
       builder: (context) {
@@ -175,16 +166,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
             style: TextStyle(fontSize: 20),
           ),
           actions: [
-            TextButton(onPressed: () {
-            }
-        , child: Text('تاكيد'),),
-            TextButton(onPressed: (){}
-              , child: Text('الغاء'),),
-
-
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context,true);
+              },
+              child: Text('تاكيد'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context,false);
+              },
+              child: Text('الغاء'),
+            ),
           ],
         );
       },
     );
+
+  if(logout ?? false) {
+    Navigator.pushReplacementNamed(context, '/login_screen');
+  }
   }
 }

@@ -16,7 +16,9 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Color(0XFF989595),
@@ -39,15 +41,18 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
             elevation: 5,
             child: Padding(
               padding: EdgeInsetsDirectional.only(
-                  bottom: 13, top: 13, start: 21, ),
+                bottom: 13,
+                top: 13,
+                start: 21,
+              ),
               child: ListTile(
                 leading: CircleAvatar(
                   backgroundImage: AssetImage('images/signup_login.png'),
-
                 ),
-                title: Text('حسابي',style: TextStyle(
-                  fontSize: 18
-                ),),
+                title: Text(
+                  'حسابي',
+                  style: TextStyle(fontSize: 18),
+                ),
                 trailing: Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 14,
@@ -73,12 +78,16 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
             elevation: 5,
             child: Padding(
               padding: EdgeInsetsDirectional.only(
-                bottom: 13, top: 13, start: 21, ),
+                bottom: 13,
+                top: 13,
+                start: 21,
+              ),
               child: ListTile(
                 leading: CircleAvatar(),
-                title: Text('حسابي',style: TextStyle(
-                    fontSize: 18
-                ),),
+                title: Text(
+                  'حسابي',
+                  style: TextStyle(fontSize: 18),
+                ),
                 trailing: Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 14,
@@ -100,20 +109,22 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
             ),
           ),
           InkWell(
-            onTap: () =>
-                Navigator.pushNamed(context, '/profile_screen')
-            ,
+            onTap: () => Navigator.pushNamed(context, '/profile_screen'),
             child: Card(
               margin: EdgeInsetsDirectional.only(bottom: 20),
               elevation: 5,
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
-                  bottom: 13, top: 13, start: 21, ),
+                  bottom: 13,
+                  top: 13,
+                  start: 21,
+                ),
                 child: ListTile(
                   leading: CircleAvatar(),
-                  title: Text('حسابي',style: TextStyle(
-                      fontSize: 18
-                  ),),
+                  title: Text(
+                    'حسابي',
+                    style: TextStyle(fontSize: 18),
+                  ),
                   trailing: Icon(
                     Icons.arrow_forward_ios_rounded,
                     size: 14,
@@ -140,12 +151,16 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
             elevation: 5,
             child: Padding(
               padding: EdgeInsetsDirectional.only(
-                bottom: 13, top: 13, start: 21, ),
+                bottom: 13,
+                top: 13,
+                start: 21,
+              ),
               child: ListTile(
                 leading: CircleAvatar(),
-                title: Text('حسابي',style: TextStyle(
-                    fontSize: 18
-                ),),
+                title: Text(
+                  'حسابي',
+                  style: TextStyle(fontSize: 18),
+                ),
                 trailing: Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 14,
@@ -171,12 +186,16 @@ class _ProfileManageScreenState extends State<ProfileManageScreen> {
             elevation: 5,
             child: Padding(
               padding: EdgeInsetsDirectional.only(
-                bottom: 13, top: 13, start: 21, ),
+                bottom: 13,
+                top: 13,
+                start: 21,
+              ),
               child: ListTile(
                 leading: CircleAvatar(),
-                title: Text('حسابي',style: TextStyle(
-                    fontSize: 18
-                ),),
+                title: Text(
+                  'حسابي',
+                  style: TextStyle(fontSize: 18),
+                ),
                 trailing: Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 14,

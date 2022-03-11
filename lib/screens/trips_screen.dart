@@ -18,8 +18,7 @@ class _TripsScreenState extends State<TripsScreen> {
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/home_screen');
-
+            Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_ios,
@@ -30,7 +29,6 @@ class _TripsScreenState extends State<TripsScreen> {
           IconButton(
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/notification');
-
             },
             icon: Icon(
               Icons.notifications_none_outlined,
@@ -40,8 +38,7 @@ class _TripsScreenState extends State<TripsScreen> {
         ],
       ),
       body: ListView(
-        padding: EdgeInsetsDirectional.only(
-            start: 23, end: 24),
+        padding: EdgeInsetsDirectional.only(start: 23, end: 24),
         children: [
           // SizedBox(
           //   height: 9.4,
@@ -116,7 +113,9 @@ class _TripsScreenState extends State<TripsScreen> {
               ],
             ),
           ),
-          SizedBox(height: 28,),
+          SizedBox(
+            height: 28,
+          ),
           ListView.builder(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
@@ -131,44 +130,68 @@ class _TripsScreenState extends State<TripsScreen> {
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.location_on_sharp,
-                            color:Color(0XFFB6E13D) ,),
-                            Text('غزة-رمال-شارع الوحدة',style:
-                              TextStyle(fontSize: 16,
-                              color: Color(0XFF585858)),),
-                            SizedBox(width: 83,),
-                            Text('نشط الان', style: TextStyle(
-                                fontSize: 16,
-                                color: Color(0XFF134878),
-                                fontWeight: FontWeight.bold
-                            )),
+                            Icon(
+                              Icons.location_on_sharp,
+                              color: Color(0XFFB6E13D),
+                            ),
+                            Text(
+                              'غزة-رمال-شارع الوحدة',
+                              style: TextStyle(
+                                  fontSize: 16, color: Color(0XFF585858)),
+                            ),
+                            SizedBox(
+                              width: 83,
+                            ),
+                            Text('نشط الان',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Color(0XFF134878),
+                                    fontWeight: FontWeight.bold)),
                           ],
                         ),
-                        SizedBox(height: 13.9,),
+                        SizedBox(
+                          height: 13.9,
+                        ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(Icons.location_on_sharp,
-                              color:Color(0XFFB6E13D) ,),
-                            Text('غزة-رمال-كابيتال مول',style:
-                            TextStyle(fontSize: 16,
-                                color: Color(0XFF585858)),),
-                            SizedBox(width: 83,),
+                            Icon(
+                              Icons.location_on_sharp,
+                              color: Color(0XFFB6E13D),
+                            ),
+                            Text(
+                              'غزة-رمال-كابيتال مول',
+                              style: TextStyle(
+                                  fontSize: 16, color: Color(0XFF585858)),
+                            ),
+                            SizedBox(
+                              width: 83,
+                            ),
                           ],
                         ),
                         Row(
                           children: [
-                            Icon(Icons.calendar_today_outlined,
-                              color:Color(0XFFB6E13D) ,),
-                            Text(' 22-2-2022',style:
-                            TextStyle(fontSize: 16,
-                                color: Color(0XFF585858)),),
-                            SizedBox(width: 32,),
-                            Icon(Icons.access_time,
-                              color:Color(0XFFB6E13D) ,),
-                            Text(' 02:35 PM',style:
-                            TextStyle(fontSize: 16,
-                                color: Color(0XFF585858)),),
+                            Icon(
+                              Icons.calendar_today_outlined,
+                              color: Color(0XFFB6E13D),
+                            ),
+                            Text(
+                              ' 22-2-2022',
+                              style: TextStyle(
+                                  fontSize: 16, color: Color(0XFF585858)),
+                            ),
+                            SizedBox(
+                              width: 32,
+                            ),
+                            Icon(
+                              Icons.access_time,
+                              color: Color(0XFFB6E13D),
+                            ),
+                            Text(
+                              ' 02:35 PM',
+                              style: TextStyle(
+                                  fontSize: 16, color: Color(0XFF585858)),
+                            ),
                           ],
                         )
                       ],

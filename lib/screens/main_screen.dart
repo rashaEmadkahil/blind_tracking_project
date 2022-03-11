@@ -36,7 +36,7 @@ class _MainScreenState extends State<MainScreen> {
           visible: _currentIndex!=0,
           child: IconButton(
             onPressed: (){
-              Navigator.pushReplacementNamed(context, '/main_screen');
+              Navigator.pushNamed(context, '/main_screen');
 
             },
             icon: Icon(

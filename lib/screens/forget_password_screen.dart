@@ -136,7 +136,7 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
               
 
             ],),
-            SizedBox(height: 9,),
+            // SizedBox(height: 9,),
             Text('اعادة الارسال'
               ,style: TextStyle(
                   fontSize: 15,

@@ -9,7 +9,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
   late TapGestureRecognizer _tapGestureRecognizer;
   late TapGestureRecognizer _tapGestureRecognizer2;
   late TextEditingController _textEditingController;
@@ -32,7 +31,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void navToSignUp() =>
       Navigator.pushReplacementNamed(context, '/sign_up_screen');
-void navToForgetPass() =>
+
+  void navToForgetPass() =>
       Navigator.pushReplacementNamed(context, '/forget_password_screen');
 
   @override
@@ -44,7 +44,6 @@ void navToForgetPass() =>
     _textEditingController.dispose();
     _passwordEditingController.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -66,11 +65,13 @@ void navToForgetPass() =>
         body: SafeArea(
             child: Padding(
           padding: EdgeInsetsDirectional.only(start: 39, end: 39),
-          child: Column(children: [
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
             Container(
+              alignment: Alignment.center,
               // color: Colors.grey,
               child: Image.asset('images/login.png'),
-
             ),
             SizedBox(
               height: 36.1,
@@ -119,29 +120,13 @@ void navToForgetPass() =>
                   ),
                 )),
             SizedBox(height: 18),
-            Center(
-              child: RichText(
-                textAlign: TextAlign.start,
-                text: TextSpan(
-
-                    style: TextStyle(color: Colors.black45, fontSize: 16),
-                    children: [
-                      TextSpan(
-
-                        recognizer: _tapGestureRecognizer2,
-                    text: 'هل نسيت كلمة السر؟',                        style: TextStyle(
-                            color: Colors.blue.shade700,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16),
-                      )
-                    ]),
-              ),
+            TextButton(
+              onPressed: () {},
+              child: Text('هل نسيت كلمة السر؟'),
             ),
-            SizedBox(
-              height: 56,
-            ),
+            SizedBox(height: 40),
             ElevatedButton(
-              onPressed:() {
+              onPressed: () {
                 Navigator.pushReplacementNamed(context, '/main_screen');
               },
               // _performLogin,
@@ -192,7 +177,7 @@ void navToForgetPass() =>
   ////////////////////////////////////////////////////
   bool _checkData() {
     if (_textEditingController.text.isEmpty &&
-        _passwordEditingController.text.isEmpty ) {
+        _passwordEditingController.text.isEmpty) {
       controlErrorText();
       return true;
     } else {
@@ -229,7 +214,7 @@ void navToForgetPass() =>
           duration: Duration(seconds: 2),
         ))
         .closed
-        .then((value) =>
-            Navigator.pushReplacementNamed(context, '/main_screen'));
+        .then(
+            (value) => Navigator.pushReplacementNamed(context, '/main_screen'));
   }
 }
