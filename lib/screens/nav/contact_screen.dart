@@ -10,8 +10,9 @@ class ContactScreen extends StatefulWidget {
 }
 
 class _ContactScreenState extends State<ContactScreen>
-    with SingleTickerProviderStateMixin{
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
+
   // List<bool> _selections = [true, false];
 
   @override
@@ -19,7 +20,7 @@ class _ContactScreenState extends State<ContactScreen>
     _tabController = TabController(
         length: 2,
         vsync:
-        this); //this relates to taken provider(abstract class) who mixin implements
+            this); //this relates to taken provider(abstract class) who mixin implements
     super.initState();
   }
 
@@ -32,9 +33,7 @@ class _ContactScreenState extends State<ContactScreen>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(
-        start: 29,end: 30, top: 39.4
-      ),
+      padding: EdgeInsetsDirectional.only(start: 29, end: 30, top: 39.4),
       child: Column(
         // padding: EdgeInsetsDirectional.only(start: 29, end: 30, top: 39.4),
         children: [
@@ -65,20 +64,17 @@ class _ContactScreenState extends State<ContactScreen>
               indicatorSize: TabBarIndicatorSize.tab,
               indicator: BoxDecoration(
                   color: Color(0xff134878),
-                  borderRadius: BorderRadius.circular(10)
-              ),
+                  borderRadius: BorderRadius.circular(10)),
               labelColor: Colors.white,
               unselectedLabelColor: Color(0xff6C6B6B),
-              onTap: (int index){
-                _tabController.index=index;
+              onTap: (int index) {
+                _tabController.index = index;
               },
               //IF WE NOT DETERMINE UNSELECTED LABEL STYLE THE IT AFFECT BOTH SELECTED AND UN SELECTED
-              labelStyle: TextStyle(
-               fontSize: 18),
+              labelStyle: TextStyle(fontSize: 18),
               //////////////////////////////////////////////
               //IF WE NOT DETERMINE UNSELECTED LABEL STYLE THE IT AFFECT BOTH SELECTED AND UN SELECTED
-              unselectedLabelStyle: TextStyle(
-               fontSize: 17),
+              unselectedLabelStyle: TextStyle(fontSize: 17),
               tabs: [
                 //un selected tap take 70%from color of selected tap
                 Tab(
@@ -89,7 +85,7 @@ class _ContactScreenState extends State<ContactScreen>
                 ),
               ],
             ),
-            
+
             // ToggleButtons(
             //   borderRadius: BorderRadius.circular(8),
             //   fillColor: Color(0xff134878),
@@ -117,18 +113,18 @@ class _ContactScreenState extends State<ContactScreen>
             //   onPressed: (int index) => _selections[index] = !_selections[index],
             // ),
           ),
-         SizedBox(height: 30,),
-         Expanded(
-           child: TabBarView(
-
-             controller: _tabController,
-             children: [
-               AllContactTab(),
-               MissedContactTab(),
-             ],
-           ),
-         )
-
+          SizedBox(
+            height: 30,
+          ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                AllContactTab(),
+                MissedContactTab(),
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
         '/add_user_screen': (context) => const AddUserScreen(),
         '/contact_screen': (context) => const ContactScreen(),
         '/home_screen': (context) => const HomeScreen(),
-        '/profile_manage_screen': (context) => const ProfileManageScreen(),
+        '/ ': (context) => const ProfileManageScreen(),
         '/trips_screen': (context) => const TripsScreen(),
         '/settings_screen': (context) => const SettingsScreen(),
         '/notification': (context) =>  NotificationScreen(),
